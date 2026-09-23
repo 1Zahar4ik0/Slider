@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Completed interior design projects — interactive project slider."
+    />
+    <title>Completed Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="projects" aria-labelledby="projects-title">
+      <div class="projects__layout">
+        <section class="projects__details">
+          <h1 class="projects__title" id="projects-title">
+            Completed<br />projects
+            <span class="projects__title-line" aria-hidden="true"></span>
+          </h1>
+
+          <p class="projects__lead">
+            Only a small part of the work performed by our company is presented
+            on the site. For 14 years on in the construction market we have made
+            happy more than 1000 families
+          </p>
+
+          <dl class="project-facts" aria-live="polite">
+            <div class="project-facts__item">
+              <dt>City:</dt>
+              <dd data-project-field="city"></dd>
+            </div>
+            <div class="project-facts__item">
+              <dt>Apartment area:</dt>
+              <dd data-project-field="area"></dd>
+            </div>
+            <div class="project-facts__item">
+              <dt>Repair time:</dt>
+              <dd data-project-field="time"></dd>
+            </div>
+            <div class="project-facts__item">
+              <dt>Repair cost:</dt>
+              <dd data-project-field="cost"></dd>
+            </div>
+          </dl>
+
+          <div class="slider-controls" aria-label="Slider controls">
+            <button
+              class="slider-controls__arrow slider-controls__arrow--previous"
+              type="button"
+              aria-label="Previous project"
+              data-direction="previous"
+            >
+              <span aria-hidden="true"></span>
+            </button>
+
+            <div class="slider-controls__dots" role="group" aria-label="Choose a project">
+              <button type="button" aria-label="Show project 1" data-slide="0"></button>
+              <button type="button" aria-label="Show project 2" data-slide="1"></button>
+              <button type="button" aria-label="Show project 3" data-slide="2"></button>
+            </div>
+
+            <button
+              class="slider-controls__arrow slider-controls__arrow--next"
+              type="button"
+              aria-label="Next project"
+              data-direction="next"
+            >
+              <span aria-hidden="true"></span>
+            </button>
+          </div>
+        </section>
+
+        <section class="projects__gallery" aria-label="Completed project photos">
+          <nav class="project-tabs" aria-label="Projects">
+            <button type="button" data-slide="0">Rostov-on-Don, Admiral</button>
+            <button type="button" data-slide="1">Sochi Thieves</button>
+            <button type="button" data-slide="2">Rostov-on-Don Patriotic</button>
+          </nav>
+
+          <div class="project-image" aria-live="polite">
+            <div class="project-image__slide project-image__slide--admiral" data-image="0">
+              <img src="assets/admiral.png" alt="Rostov-on-Don, Admiral interior" />
+            </div>
+            <div class="project-image__slide project-image__slide--sochi" data-image="1">
+              <img src="assets/sochi-source.png" alt="Sochi, Thieves interior" />
+            </div>
+            <div class="project-image__slide project-image__slide--patriotic" data-image="2">
+              <img src="assets/patriotic-source.png" alt="Rostov-on-Don, Patriotic interior" />
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
